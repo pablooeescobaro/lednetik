@@ -14,5 +14,7 @@ $base-font-size: 16px;
   @return #{$remSize}rem;
 }
 
+$h200: calcRem(200px);
+$h70: calcRem(70px);
 $h18: calcRem(18px);
 // $h: calcRem(px);

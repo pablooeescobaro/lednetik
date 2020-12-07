@@ -1,0 +1,38 @@
+.social {
+    &__items{
+        @include flex(center, center, row, nowrap);
+    }
+    &__red{
+        fill: red;
+    }
+    &__round {
+        @include size(66px, 66px, true);
+        @include flex(center, center, row, nowrap);
+        &:not(last-of-type){
+            margin-right: 100px;
+        }
+
+        &--flame {
+            background-color: $flame;
+        }
+
+        &--white {
+            background-color: $white;
+        }
+    }
+
+    &__icon {
+        @include size(35px,35px);
+        &--hover-flame path{
+            fill: red;
+        }
+        &--telegram{
+            position: relative;
+            left: -2px;
+        }
+        &--viber{
+            position: relative;
+            right: -1px;
+        }
+    }
+}

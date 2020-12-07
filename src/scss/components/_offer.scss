@@ -1,0 +1,47 @@
+.offer {
+    @include size(100%, calc(100vh-157px));
+    position: relative;
+    background-image: url(./../assets/images/bg-image.png);
+    background-position: center center;
+    background-size: cover;
+
+    &:after {
+        content: '';
+        @include position();
+        position: absolute;
+        background-color: rgb(0, 0, 0, .6);
+        z-index: 1;
+    }
+
+    &__inner {
+        @include flex(center, center, column, nowrap);
+        height: 100%;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__title {
+        @include text($h200, 500, $white, $f-montserrat);
+    }
+
+    &__subtitle {
+        position: relative;
+        top: -40px;
+    }
+
+    &__subtitle-text {
+        @include text($h70, 300, $white, $f-montserrat);
+        @include flex(flex-end, center, row, nowrap);
+
+        &:before {
+            @include size(230px, 5px);
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            height: 5px;
+            background: $flame;
+            margin-right: 10px;
+        }
+    }
+}
