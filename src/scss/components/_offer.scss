@@ -1,5 +1,5 @@
 .offer {
-    @include size(100%, calc(100vh-157px));
+    @include size(100%, 100vh);
     position: relative;
     background-image: url(./../assets/images/bg-image.png);
     background-position: center center;
@@ -30,18 +30,20 @@
     }
 
     &__subtitle-text {
-        @include text($h70, 300, $white, $f-montserrat);
+        @include text($h70, 200, $white, $f-montserrat);
         @include flex(flex-end, center, row, nowrap);
 
         &:before {
             @include size(230px, 5px);
             content: '';
+            position: relative;
+            top: 4px;
             display: inline-block;
             vertical-align: middle;
             box-sizing: border-box;
             height: 5px;
             background: $flame;
-            margin-right: 10px;
+            margin-right: 15px;
         }
     }
 }

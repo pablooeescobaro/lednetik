@@ -26,3 +26,12 @@ SmoothScroll({
     // Поддержка тачпада
     touchpadSupport   : true,
 })
+
+window.onscroll = function() {
+  let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrolled >= 100){
+    document.getElementById('header').classList.add("header__scroll");
+  } else{
+    document.getElementById('header').classList.remove("header__scroll");
+  }
+}

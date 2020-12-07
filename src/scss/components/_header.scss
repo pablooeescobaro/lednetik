@@ -1,6 +1,18 @@
+.header.header__scroll {
+    @include flex(center, center, row, nowrap);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+    padding: 0;
+}
+
 .header {
-    padding: 50px 0;
+    @include flex(center, center, row, nowrap);
+    height: 150px;
     background-color: $floral-white;
+    height: 75px;
+
 
     &__inner {
         @include flex(space-between, center, row, nowrap);
@@ -8,7 +20,6 @@
 
     &__logo {
         position: relative;
-        top: -10px;
     }
 
     &__items {
@@ -17,6 +28,8 @@
     }
 
     &__item {
+        position: relative;
+        top: 4px;
         margin: 0 40px;
         padding-bottom: 3px;
         border-bottom: 3px solid transparent;
@@ -32,9 +45,10 @@
     &__item-a {
         @include text($h18, bold, $eerie-black, $f-montserrat);
     }
-
-    &__tel {}
-
+    &__tel{
+        position: relative;
+        top: 4px;
+    }
     &__tel-a {
         @include text($h18, 400, $eerie-black, $f-montserrat);
 

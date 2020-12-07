@@ -1,14 +1,13 @@
 .social {
-    &__items{
+    &__items {
         @include flex(center, center, row, nowrap);
     }
-    &__red{
-        fill: red;
-    }
+
     &__round {
-        @include size(66px, 66px, true);
+        @include size(60px, 60px, true);
         @include flex(center, center, row, nowrap);
-        &:not(last-of-type){
+        cursor: pointer;
+        &:not(last-of-type) {
             margin-right: 100px;
         }
 
@@ -22,17 +21,16 @@
     }
 
     &__icon {
-        @include size(35px,35px);
-        &--hover-flame path{
-            fill: red;
-        }
-        &--telegram{
+        @include size(30px, 30px);
+        cursor: pointer;
+
+        &--telegram {
             position: relative;
             left: -2px;
         }
-        &--viber{
-            position: relative;
-            right: -1px;
-        }
     }
+}
+
+svg {
+    cursor: pointer;
 }
