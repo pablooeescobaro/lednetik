@@ -1,17 +1,16 @@
 .header.header__scroll {
     @include flex(center, center, row, nowrap);
     position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 50;
-    padding: 0;
 }
 
 .header {
     @include flex(center, center, row, nowrap);
-    height: 150px;
     background-color: $floral-white;
-    height: 75px;
+    height: 80px;
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+    padding: 0;
 
 
     &__inner {
@@ -30,13 +29,14 @@
     &__item {
         position: relative;
         top: 4px;
-        margin: 0 40px;
         padding-bottom: 3px;
         border-bottom: 3px solid transparent;
         transition-property: border-color;
         transition-duration: 0.3s;
         transition-timing-function: ease;
-
+        &:not(last-of-type){
+            margin-right: 40px;
+        }
         &:hover {
             border-color: $flame;
         }

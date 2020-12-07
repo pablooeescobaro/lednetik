@@ -1,0 +1,28 @@
+.about {
+    @include flex(center, center, row, nowrap);
+    background-color: $floral-white;
+
+    &__text {
+        max-width: 700px;
+    }
+
+    &__title {
+        margin-bottom: 100px;
+    }
+
+    &__subtitle {
+        line-height: 45px;
+    }
+
+    &__inner {
+        @include flex(space-between, center, row, nowrap);
+        padding-top: 300px;
+        padding-bottom: 300px;
+    }
+
+    &__img {
+        @include size (400px, 400px);
+        box-shadow: 10px 10px 0px $flame;
+    }
+
+}

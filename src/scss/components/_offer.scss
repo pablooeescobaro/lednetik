@@ -21,7 +21,7 @@
     }
 
     &__title {
-        @include text($h200, 500, $white, $f-montserrat);
+        @include text($h170, 500, $white, $f-montserrat);
     }
 
     &__subtitle {
@@ -30,11 +30,11 @@
     }
 
     &__subtitle-text {
-        @include text($h70, 200, $white, $f-montserrat);
+        @include text($h60, 200, $white, $f-montserrat);
         @include flex(flex-end, center, row, nowrap);
 
         &:before {
-            @include size(230px, 5px);
+            @include size(190px, 5px);
             content: '';
             position: relative;
             top: 4px;
