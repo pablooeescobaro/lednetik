@@ -3,11 +3,11 @@ $("#sandwichmenu").on("click", function (e) {
   $("#sandwichmenu").toggleClass("active");
   $(".menu__box").toggleClass("active");
 });
-$(".burger__menu-a").on("click", function (e) {
+$(".burger__item-a").on("click", function (e) {
   $("#sandwichmenu").toggleClass("active");
   $(".menu__box").toggleClass("active");
 });
-$(".burger__menu-item").on("click", function (e) {
+$(".header__item").on("click", function (e) {
   $("#sandwichmenu").toggleClass("active");
   $(".menu__box").toggleClass("active");
 });

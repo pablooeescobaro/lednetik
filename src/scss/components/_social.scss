@@ -13,6 +13,10 @@
 
     &:not(:last-of-type) {
       margin-right: 100px;
+      @include media-d-m($screen-iphone-plus){
+      margin-right: 50px;
+
+      }
     }
 
     &--flame {

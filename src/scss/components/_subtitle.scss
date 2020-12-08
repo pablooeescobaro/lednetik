@@ -1,3 +1,7 @@
-.subtitle{
+.subtitle {
     @include text($h24, 400, $eerie-black, $f-montserrat);
+
+    @include media-d-m($screen-iphone-plus) {
+        text-align: center;
+    }
 }
