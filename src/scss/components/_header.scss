@@ -12,6 +12,11 @@
     z-index: 50;
     padding: 0;
 
+    &__menu {
+        @include media-d-m($screen-desktop-large){
+            display: none;
+        }
+    }
 
     &__inner {
         @include flex(space-between, center, row, nowrap);
@@ -34,9 +39,11 @@
         transition-property: border-color;
         transition-duration: 0.3s;
         transition-timing-function: ease;
-        &:not(last-of-type){
+
+        &:not(:last-of-type) {
             margin-right: 40px;
         }
+
         &:hover {
             border-color: $flame;
         }
@@ -45,10 +52,12 @@
     &__item-a {
         @include text($h18, bold, $eerie-black, $f-montserrat);
     }
-    &__tel{
+
+    &__tel {
         position: relative;
         top: 4px;
     }
+
     &__tel-a {
         @include text($h18, 400, $eerie-black, $f-montserrat);
 

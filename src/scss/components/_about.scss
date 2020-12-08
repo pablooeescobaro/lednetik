@@ -2,6 +2,10 @@
     @include flex(center, center, row, nowrap);
     background-color: $floral-white;
 
+    &__inner {
+        overflow-x: hidden;
+    }
+
     &__text {
         max-width: 700px;
     }
@@ -20,9 +24,20 @@
         padding-bottom: 300px;
     }
 
-    &__img {
+    &__block-img {
         @include size (400px, 400px);
+        @include padding-hack(29.3%, cover);
+        &:hover>.about__img {
+            box-shadow: 20px 20px 0px $flame;
+            transform: translate(-5px, -5px);
+        }
+    }
+
+    &__img {
         box-shadow: 10px 10px 0px $flame;
+        transition-property: box-shadow, transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
     }
 
 }

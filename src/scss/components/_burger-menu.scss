@@ -3,7 +3,7 @@ $style: tpl-hamburger;
 .tpl-hamburger {
   position: relative;
   top: 5px;
-  @include media-d-m($screen-tablet-small){
+  @include media-d-m($screen-desktop-large){
     top: 0.4px;
   }
   & svg {
@@ -78,7 +78,7 @@ $style: tpl-hamburger;
 
     background-color: $floral-white;
     box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
-
+    
     transition-duration: 0.3s;
   }
 }
@@ -90,7 +90,7 @@ $style: tpl-hamburger;
   transition-duration: 0.3s;
   text-align: center;
 }
-@include media-d-m($screen-desktop) {
+@include media-d-m($screen-desktop-large) {
   .tpl-hamburger {
     display: block;
   }

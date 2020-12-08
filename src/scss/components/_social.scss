@@ -1,32 +1,70 @@
 .social {
-    &__items {
-        @include flex(center, center, row, nowrap);
+  &__items {
+    @include flex(center, center, row, nowrap);
+  }
+
+  &__round {
+    @include size(60px, 60px, true);
+    @include flex(center, center, row, nowrap);
+    cursor: pointer;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &:not(:last-of-type) {
+      margin-right: 100px;
     }
 
-    &__round {
-        @include size(60px, 60px, true);
-        @include flex(center, center, row, nowrap);
-        cursor: pointer;
-        &:not(last-of-type) {
-            margin-right: 100px;
-        }
+    &--flame {
+      background-color: $flame;
 
-        &--flame {
-            background-color: $flame;
-        }
+      &:hover {
+        background-color: $white;
 
-        &--white {
-            background-color: $white;
+        &>a>.social__icon--flame {
+          fill: $flame;
         }
+      }
     }
 
-    &__icon {
-        @include size(30px, 30px);
-        cursor: pointer;
+    &--white {
+      background-color: $white;
 
-        &--telegram {
-            position: relative;
-            left: -2px;
+      &:hover {
+        background-color: $flame;
+
+        &>a>.social__icon--white {
+          fill: $white;
         }
+      }
     }
+    &:hover{
+      transform: translateY(-3px);
+    }
+  }
+
+  &__icon {
+    @include size(30px, 30px);
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &--telegram {
+      transform: translateX(-2px);
+    }
+
+    &--viber{
+      transform: translateY(1px);
+    }
+
+    &--flame {
+      fill: $white;
+    }
+
+    &--white {
+      fill: $flame;
+      transition: all 0.3s ease;
+    }
+  }
 }
