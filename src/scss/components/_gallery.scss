@@ -17,6 +17,11 @@
 
     &__items {
         @include flex(space-between, flex-start, row, wrap);
+
+        @include media-d-m($screen-netbook) {
+            @include flex(center, flex-start, row, wrap);
+
+        }
     }
 
     &__item {
@@ -25,6 +30,10 @@
         transition-timing-function: ease;
         margin-bottom: 100px;
         margin-right: 20px;
+
+        @include media-d-m($screen-netbook) {
+            margin-bottom: 50px;
+        }
 
         &:hover {
             transform: translate(-5px, -5px);

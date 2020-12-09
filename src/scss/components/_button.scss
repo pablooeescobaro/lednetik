@@ -7,6 +7,9 @@
     transition-property: border-color, background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    @include media-d-m($screen-netbook) {
+        @include max-width(100%);
+    }
 
     &:hover {
         background-color: $floral-white;
