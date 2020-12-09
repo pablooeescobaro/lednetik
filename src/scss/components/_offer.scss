@@ -18,6 +18,7 @@
         height: 100%;
         z-index: 2;
         position: relative;
+        
     }
 
     &__title {
@@ -61,7 +62,7 @@
         }
 
         &:before {
-            @include size(110px, 5px);
+            @include size(192px, 5px);
             content: '';
             position: relative;
             top: 4px;

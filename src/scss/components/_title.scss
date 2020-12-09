@@ -1,7 +1,8 @@
 .title {
-    @include text($h50, 700, $eerie-black, $f-montserrat);
+	@include text($h50, 700, $eerie-black, $f-montserrat);
+	text-transform: uppercase;
 
-    @include media-d-m($screen-iphone-plus) {
-        text-align: center;
-    }
+	@include media-d-m($screen-iphone-plus) {
+		text-align: center;
+	}
 }

@@ -1,0 +1,45 @@
+.gallery {
+    background-color: $floral-white;
+
+    &__inner {
+        padding-top: 300px;
+        padding-bottom: 300px;
+
+        @include media-d-m($screen-iphone-plus) {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 100px;
+    }
+
+    &__items {
+        @include flex(space-between, flex-start, row, wrap);
+    }
+
+    &__item {
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        margin-bottom: 100px;
+        margin-right: 20px;
+
+        &:hover {
+            transform: translate(-5px, -5px);
+
+            &>.gallery__img {
+                box-shadow: 20px 20px 0px $black-olive;
+            }
+        }
+    }
+
+    &__img {
+        @include max-size(380px, 470px);
+        transition-property: box-shadow;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        box-shadow: 10px 10px 0px $black-olive;
+    }
+}

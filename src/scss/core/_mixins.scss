@@ -44,6 +44,17 @@
   }
   @content;
 }
+@mixin max-size($size-w, $size-h, $round: false) {
+  max-width: $size-w;
+  max-height: $size-h;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  @if $round {
+    border-radius: 50%;
+  }
+  @content;
+}
 @mixin max-width($max-w){
   max-width: $max-w;
   width: 100%;

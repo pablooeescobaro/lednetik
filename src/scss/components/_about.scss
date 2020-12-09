@@ -1,81 +1,83 @@
 .about {
-    @include flex(center, center, row, nowrap);
-    background-color: $floral-white;
+  @include flex(center, center, row, nowrap);
+  background-color: $floral-white;
 
-    &__inner {
-        overflow-x: hidden;
+  &__inner {
+    overflow-x: hidden;
+    padding-top: 300px;
+    padding-bottom: 300px;
+
+    @include media-d-m($screen-iphone-plus) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+  }
+
+  &__text {
+    max-width: 700px;
+    margin-right: 20px;
+
+    @include media-d-m($screen-desktop) {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 100px;
+
+    @include media-d-m($screen-desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    line-height: 45px;
+  }
+
+  &__inner {
+    @include flex(space-between, center, row, nowrap);
+
+
+    @include media-d-m($screen-desktop) {
+      @include flex(center, center, column, nowrap);
+    }
+  }
+
+  &__block-img {
+    @include size (400px, 400px);
+    @include padding-hack(29.3%, cover);
+
+
+    @include media-d-m($screen-desktop) {
+      @include padding-hack(46.6%, cover);
     }
 
-    &__text {
-        max-width: 700px;
-        margin-right: 20px;
-
-        @include media-d-m($screen-desktop) {
-            margin-right: 0;
-            margin-bottom: 50px;
-        }
+    @include media-d-m($screen-tablet-large) {
+      @include padding-hack(54%, cover);
     }
 
-    &__title {
-        margin-bottom: 100px;
-
-        @include media-d-m($screen-desktop) {
-            margin-bottom: 50px;
-        }
+    @include media-d-m($screen-tablet-small) {
+      @include padding-hack(60%, cover);
+      @include size (300px, 300px);
     }
 
-    &__subtitle {
-        line-height: 45px;
+    @include media-d-m($screen-tablet-small) {
+      @include size (250px, 250px);
     }
 
-    &__inner {
-        @include flex(space-between, center, row, nowrap);
-        padding-top: 300px;
-        padding-bottom: 300px;
-        @include media-d-m($screen-iphone-plus) {
-            padding-top: 150px;
-            padding-bottom: 150px;
-        }
 
-        @include media-d-m($screen-desktop) {
-            @include flex(center, center, column, nowrap);
-        }
+    &:hover>.about__img {
+      box-shadow: 20px 20px 0px $flame;
+      transform: translate(-5px, -5px);
     }
+  }
 
-    &__block-img {
-        @include size (400px, 400px);
-        @include padding-hack(29.3%, cover);
-
-
-        @include media-d-m($screen-desktop) {
-            @include padding-hack(46.6%, cover);
-        }
-
-        @include media-d-m($screen-tablet-large) {
-            @include padding-hack(54%, cover);
-        }
-
-        @include media-d-m($screen-tablet-small) {
-            @include padding-hack(60%, cover);
-            @include size (300px, 300px);
-        }
-
-        @include media-d-m($screen-tablet-small) {
-            @include size (250px, 250px);
-        }
-
-
-        &:hover>.about__img {
-            box-shadow: 20px 20px 0px $flame;
-            transform: translate(-5px, -5px);
-        }
-    }
-
-    &__img {
-        box-shadow: 10px 10px 0px $flame;
-        transition-property: box-shadow, transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-    }
+  &__img {
+    box-shadow: 10px 10px 0px $flame;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
 
 }

@@ -1,0 +1,35 @@
+.button {
+    @include max-size(360px, 80px);
+    @include flex(center, center, row, nowrap);
+    height: 80px;
+    background-color: $flame;
+    border: 3px solid transparent;
+    transition-property: border-color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &:hover {
+        background-color: $floral-white;
+        border-color: $flame;
+
+        &>.button__text {
+            color: $flame;
+        }
+    }
+    &:active{
+        background-color: $flame;
+        border-color: transparent;
+
+        &>.button__text {
+            color: $white;
+        }
+    }
+
+    &__text {
+        @include text($h24, 700, $white, $f-montserrat);
+        text-transform: uppercase;
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+}
